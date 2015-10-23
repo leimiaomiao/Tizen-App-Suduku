@@ -227,7 +227,7 @@ function initLabel(){
 	var stage = stageMenu[stageIndex];
 	
 	stages = new LTextField();
-	stages.font = "HG行書体";
+	stages.font = "黑体";
 	stages.size = 40;
 	stages.x = 253;
 	stages.y = 20;
@@ -235,14 +235,14 @@ function initLabel(){
 	labelLayer.addChild(stages);
 
 	labelText = new LTextField();
-	labelText.font = "HG行書体";
+	labelText.font = "黑体";
 	labelText.size = 30;
 	labelText.x = 100;
 	labelText.y = 475;
 	labelText.text = "Time:";
 	labelLayer.addChild(labelText);
 	times = new LTextField();
-	times.font = "HG行書体";
+	times.font = "黑体";
 	times.size = 30;
 	times.x = 200;
 	times.y = 475;
@@ -250,14 +250,14 @@ function initLabel(){
 	labelLayer.addChild(times);
 	
 	stagetype = new LTextField();
-	stagetype.font = "HG行書体";
+	stagetype.font = "黑体";
 	stagetype.size = 30;
 	stagetype.x = 100;
 	stagetype.y = 520;
 	stagetype.text = stage.flag == 0?"级别：普通":"级别：高级";
 	labelLayer.addChild(stagetype);
 	stagetype = new LTextField();
-	stagetype.font = "HG行書体";
+	stagetype.font = "黑体";
 	stagetype.size = 20;
 	stagetype.x = 90;
 	stagetype.y = 570;
@@ -265,9 +265,9 @@ function initLabel(){
 	if(stage.flag == 0){
 		stagetype.text = "说明：横竖没有重复数字";
 	}else{
-		stagetype.text = "说明：横竖没有重复数字。且，";
+		stagetype.text = "说明：横竖没有重复数字。";
 		stagetype = new LTextField();
-		stagetype.font = "HG行書体";
+		stagetype.font = "黑体";
 		stagetype.size = 20;
 		stagetype.x = 80;
 		stagetype.y = 610;
@@ -284,5 +284,17 @@ function initButton(){
 	backLayer.addChild(btnReturn);
 	btnReturn.x = 420; 
 	btnReturn.y = 30;
+	btnReturn.scaleX = 1;
+	btnReturn.scaleY = 1;
 	btnReturn.addEventListener(LMouseEvent.MOUSE_UP,menuShow);
 }
+
+window.addEventListener('tizenhwkey', function(e) {
+	if(e.keyName == "back") {
+		try {
+			tizen.application.getCurrentApplication().exit();
+		} catch (error) {
+			console.error("getCurrentApplication(): " + error.message);
+		}
+	}
+},false);

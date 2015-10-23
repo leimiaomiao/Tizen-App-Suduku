@@ -15,7 +15,7 @@ function GameLogo(){
 	self.addChild(social);
 	
 	labelText = new LTextField();
-	labelText.font = "HG行書体";
+	labelText.font = "黑体";
 	labelText.size = 14;
 	labelText.x = 50;
 	labelText.y = 650;
@@ -23,7 +23,7 @@ function GameLogo(){
 	self.addChild(labelText);
 	labelText = new LTextField();
 	labelText.color = "#006400";
-	labelText.font = "HG行書体";
+	labelText.font = "黑体";
 	labelText.size = 14;
 	labelText.x = 50;
 	labelText.y = 700;
