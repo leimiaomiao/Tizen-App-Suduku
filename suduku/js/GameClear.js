@@ -5,7 +5,7 @@ function GameClear(){
 	
 	layer = new LSprite();
 	layer.alpha = 0.7;
-	layer.graphics.drawRect(6,"#FF7F50",[70,50,LGlobal.width-100,LGlobal.height-90],true,"#E0FFFF");
+	layer.graphics.drawRect(6,"#FF7F50",[60,50,LGlobal.width-100,LGlobal.height-90],true,"#E0FFFF");
 	self.addChild(layer);
 	
 	layer = new LSprite();
